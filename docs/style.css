@@ -23,7 +23,7 @@ main h1{
 }
 
 .item, .item p{
-    color: #fff;
+    color: #3c0a64;
     background-color: rgb(168, 240, 240);
     border-radius: 18px;
     padding: 12px;
@@ -37,11 +37,12 @@ main h1{
     /* margin: 0 10px 0 0; */
     width: 10vh;
     height: 10vh;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 
 .text{
-    width: 80%;
+    width: calc(100% - 10vh - 2vh);
+    padding: 0 0 0 2vh;
 
     display: flex;
     justify-content: space-around;
@@ -74,6 +75,7 @@ footer{
 
 .button{
     text-decoration: none;
+    color: white;
     background-color: rgb(61, 39, 122);
     border-radius: 10px;
     padding: 0 0.8em;
