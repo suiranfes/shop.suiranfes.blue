@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+:root{
+    color: rgb(52, 138, 126);
+    background-color: rgb(240, 255, 254);
+
+    /* 後でNoto Sans入れる */
+    font-family: sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+main{
+    margin: 0 10%;
+    background-color: rgba(188, 188, 255, 0.1);
+}
+
+main h1{
+    margin: 0;
+    padding: 0.6em 5%;
+}
+
+.item, .item p{
+    color: #fff;
+    background-color: rgb(168, 240, 240);
+    border-radius: 18px;
+    padding: 12px;
+    margin: 12px 5%;
+
+    display: flex;
+    align-items: center;
+}
+
+.img{
+    /* margin: 0 10px 0 0; */
+    width: 10vh;
+    height: 10vh;
+    background-color: white;
+}
+
+.text{
+    display: flex;
+}
+
+footer{
+    width: 100%;
+    height: 20vh;
+    margin: 0 0 0 0vw;
+    padding: 0 0;
+    background-color: rgba(90 255 192 / .4);
+    backdrop-filter: blur(12px);
+    border-radius: 32px 32px 0px 0px;
+
+    position: fixed;
+    top: 80vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.button{
+    text-decoration: none;
+    background-color: rgb(61, 39, 122);
+    border-radius: 10px;
+    padding: 0 0.8em;
+}
+
+.top{
+    display: flex;
+    flex-direction: column;
+}
