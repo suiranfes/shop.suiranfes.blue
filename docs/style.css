@@ -70,7 +70,7 @@ footer{
 
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .button{
@@ -88,7 +88,7 @@ footer{
 
 .under-button{
     background-color: rgb(47, 243, 210, .4);
-    padding: 6vh 6vw;
+    padding: 4vh 6vw;
     margin: 2vh 4vw;
     border-radius: 32px;
     font-size: 4vh;
