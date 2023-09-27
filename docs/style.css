@@ -26,6 +26,7 @@ main h1{
     color: #3c0a64;
     background-color: rgb(168, 240, 240);
     border-radius: 18px;
+    box-shadow: 2px 4px rgba(0 0 128 / .2);
     padding: 12px;
     margin: 12px 5%;
 
@@ -77,6 +78,7 @@ footer{
     text-decoration: none;
     color: white;
     background-color: rgb(61, 39, 122);
+    box-shadow: 2px 2px 4px rgba(0 128 128 / .4);
     border-radius: 10px;
     padding: 0 0.8em;
 }
