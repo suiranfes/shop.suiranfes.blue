@@ -7,12 +7,12 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-
+  deploy-to-github-pages:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
+
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
@@ -20,8 +20,15 @@ jobs:
 
     - name: Publish
       run: |
-        mkdir docs
         cd suiran
         dotnet publish -c Release -o output
         cd ../
+        mkdir docs
         cp -a -r ./suiran/output/wwwroot ./docs
+
+    - name: Commit wwwroot to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@3.7.1
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: docs
