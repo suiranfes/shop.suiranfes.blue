@@ -20,4 +20,6 @@
 ```shell
 $ cd suiran
 # dotnetコマンドをインストール
+$ dotnet watch run --pathbase=/suiran
+# http://localhost:5291/suiran にブラウザでアクセス
 ```
