@@ -11,24 +11,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - name: 🛒 Checkout
+      uses: actions/checkout@v4.1.0
 
-    - name: Setup .NET
+    - name: ✨ Setup .NET
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 7.0.x
 
-    - name: Publish
+    - name: 📦 Publish
       run: |
         cd suiran
-        dotnet publish -c Release -o output
-        cd ../
-        mkdir docs
-        cp -a -r ./suiran/output/wwwroot ./docs
+        dotnet publish -c Release -o publish
 
-    - name: Commit wwwroot to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@3.7.1
+    - name: 🚀 Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: docs
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: publish/wwwroot
+        force_orphan: true
