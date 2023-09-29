@@ -1,0 +1,154 @@
+@page "/sell"
+@inject HttpClient Http
+
+<style>
+:root{
+    color: rgb(81, 98, 155);
+    background-color: rgb(240, 255, 254);
+
+    /* 後でNoto Sans入れる */
+    font-family: sans-serif;
+}
+
+body, main, main h1{margin: 0;}
+main{background-color: rgba(188, 188, 255, 0.1);}
+main h1{padding: 0.6em 5%;}
+
+.item, .item p{
+    color: #3c0a64;
+    background-color: rgb(168, 240, 240);
+    border-radius: 18px;
+    box-shadow: 2px 4px rgba(0 0 128 / .2);
+    padding: 12px;
+    margin: 12px 5%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.img{
+    /* margin: 0 10px 0 0; */
+    width: 10vh;
+    height: 10vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.text{
+    width: calc(100% - 10vh - 2vh);
+    padding: 0 0 0 2vh;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-around;
+}
+
+.text div{
+    width: 50%;
+    padding: 0;
+}
+
+.footer{
+    /*width: 100%;*/
+    height: 20vh;
+    margin: -10vh 0;
+    /*padding: 0;*/
+    background-color: rgba(90 255 192 / .4);
+    backdrop-filter: blur(12px);
+    border-radius: 46px 46px 0px 0px;
+
+    position: sticky;
+    top: 80vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(61, 39, 122);
+    box-shadow: 2px 2px 4px rgba(0 128 128 / .4);
+    border-radius: 10px;
+    padding: 0 0.8em;
+	 font-size: 1.4em;
+}
+
+.top{
+    display: flex;
+    flex-direction: column;
+}
+
+.under-button{
+    text-decoration: none;
+    background-color: rgb(47, 243, 210, .4);
+    padding: 4vh 6vw;
+    margin: 2vh 4vw;
+    border-radius: 32px;
+    font-size: 4vh;
+}
+</style>
+
+<PageTitle>会計 | 翠巒祭</PageTitle>
+
+<h1>会計</h1>
+
+
+<div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
+  <div class="toast-header">
+    <img src="..." class="rounded me-2" alt="...">
+    <strong class="me-auto">Bootstrap</strong>
+    <small>11 mins ago</small>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body">
+    Hello, world! This is a toast message.
+  </div>
+</div>
+
+@if (item_data == null)
+{
+    <p><em>読み込み中…</em></p>
+}
+else
+{
+    <div class="footer">
+        <a class="under-button">削除</a>
+        <a class="under-button">決定</a>
+    </div>
+
+    @foreach (var item in item_data)
+    {
+	     <div class="item">
+				<div class="img"></div>
+
+				<div class="text">
+					<div>@item.ItemName</div>
+					<div>
+						<a class="button">-</a> 0 <a class="button">+</a>
+					</div>
+					<div>@item.ItemPrice 円</div>
+					<div>0 円</div>
+				</div>
+        </div>
+    }
+}
+
+<div style="height: 20vh;"></div>
+
+@code {
+    private ItemData[]? item_data;
+
+    protected override async Task OnInitializedAsync()
+    {
+        item_data = await Http.GetFromJsonAsync<ItemData[]>("sample-data/item.json");
+    }
+
+    public class ItemData
+    {
+        public string? ItemName { get; set; }
+        public int ItemPrice { get; set; }
+    }
+}
