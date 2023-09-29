@@ -1,22 +1,34 @@
 [
   {
-    "itemName": "かき氷1",
-    "itemPrice": 200000
+    "itemName": "焼きそば",
+    "itemPrice": 300
   },
   {
-    "itemName": "かき氷2",
-    "itemPrice": 200000
+    "itemName": "フランクフルト",
+    "itemPrice": 200
   },
   {
-    "itemName": "かき氷3",
-    "itemPrice": 200000
+    "itemName": "チュロス",
+    "itemPrice": 200
   },
   {
-    "itemName": "かき氷4",
-    "itemPrice": 200000
+    "itemName": "アイスチョコバナナ",
+    "itemPrice": 300
   },
   {
-    "itemName": "かき氷5",
-    "itemPrice": 200000
+    "itemName": "つぶつぶアイス",
+    "itemPrice": 350
+  },
+  {
+    "itemName": "かき氷",
+    "itemPrice": 200
+  },
+  {
+    "itemName": "ドリンク",
+    "itemPrice": 300
+  },
+  {
+    "itemName": "ペットボトル",
+    "itemPrice": 150
   }
 ]
