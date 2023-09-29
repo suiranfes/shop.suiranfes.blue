@@ -20,7 +20,6 @@ jobs:
 
     - name: Publish
       run: |
-        sudo rm -r docs
         mkdir docs
         cd suiran
         dotnet publish -c Release -o output
