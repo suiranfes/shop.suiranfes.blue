@@ -1,6 +1,5 @@
 :root{
     color: rgb(81, 98, 155);
-    background-color: rgb(240, 255, 254);
 
     /* 後でNoto Sans入れる */
     font-family: sans-serif;
@@ -12,9 +11,9 @@ main h1{padding: 0.6em 5%;}
 
 .item, .item p{
     color: #3c0a64;
-    background-color: rgb(168, 240, 240);
+    background-color: rgb(205, 255, 255);
     border-radius: 18px;
-    box-shadow: 2px 4px rgba(0 0 128 / .2);
+    box-shadow: 2px 4px rgba(0, 0, 90, 0.4);
     padding: 12px;
     margin: 12px 5%;
 
