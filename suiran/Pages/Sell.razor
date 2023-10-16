@@ -16,18 +16,18 @@ else
         <a class="under-button">決定</a>
     </div>
 
-    @foreach (var item in item_data)
+    @foreach (var item in this.item_data)
     {
-	     <div class="item">
+	     <div class="item" @key="item.ItemName">
 				<div class="img"></div>
 
 				<div class="text">
 					<div>@item.ItemName</div>
 					<div>
-						<a class="button">-</a> 0 <a class="button">+</a>
+						<a class="button" @onclick="() => Declement(item)">-</a> @item.ItemNum <a class="button" @onclick="() => Plus(item)">+</a>
 					</div>
 					<div>@item.ItemPrice 円</div>
-					<div>0 円</div>
+					<div>@item.ItemPrices 円</div>
 				</div>
         </div>
     }
@@ -47,5 +47,20 @@ else
     {
         public string? ItemName { get; set; }
         public int ItemPrice { get; set; }
-    }
+        public int ItemNum = 0;
+        public int ItemPrices => (int)(ItemPrice * ItemNum);
+	}
+
+	private void Declement(ItemData item)
+	{
+		if (item.ItemNum != 0)
+			item.ItemNum--;
+		StateHasChanged();// UIの再描画
+	}
+
+	private void Plus(ItemData item)
+	{
+		item.ItemNum++;
+		StateHasChanged();// UIの再描画
+	}
 }
