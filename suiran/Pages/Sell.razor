@@ -24,7 +24,9 @@ else
 				<div class="text">
 					<div>@item.ItemName</div>
 					<div>
-						<a class="button" @onclick="() => Declement(item)">-</a> @item.ItemNum <a class="button" @onclick="() => Plus(item)">+</a>
+						<a class="button" @onclick="() => Declement(item)" oncontextmenu="return false;">-</a>
+							@item.ItemNum 
+						<a class="button" @onclick="() => Plus(item)" oncontextmenu="return false;">+</a>
 					</div>
 					<div>@item.ItemPrice 円</div>
 					<div>@item.ItemPrices 円</div>
