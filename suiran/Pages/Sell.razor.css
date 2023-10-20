@@ -1,19 +1,18 @@
 :root{
-    color: rgb(81, 98, 155);
+    color: #3b8686;
 
     /* 後でNoto Sans入れる */
     font-family: sans-serif;
 }
 
 body, main, main h1{margin: 0;}
-main{background-color: rgba(188, 188, 255, 0.1);}
 main h1{padding: 0.6em 5%;}
 
 .item, .item p{
-    color: #3c0a64;
-    background-color: rgb(205, 255, 255);
+    color: #3b8686;
+    background-color: #cff09e;
     border-radius: 18px;
-    box-shadow: 2px 4px rgba(0, 0, 90, .2);
+    box-shadow: 2px 4px #a8dba8;
     padding: 12px;
     margin: 12px 5%;
 
@@ -49,8 +48,8 @@ main h1{padding: 0.6em 5%;}
     height: 20vh;
     margin: -10vh 0;
     /*padding: 0;*/
-    background-color: rgba(90 255 192 / .4);
-    backdrop-filter: blur(12px);
+    background-color: rgba(255 255 255 / .2);
+    backdrop-filter: blur(10px);
     border-radius: 46px 46px 0px 0px;
 
     position: sticky;
@@ -59,13 +58,16 @@ main h1{padding: 0.6em 5%;}
     display: flex;
     justify-content: space-between;
     align-items: center;
+	
+	border: solid #79bd9a;
+	border-width: 1px 1px 0 1px;
 }
 
 .button{
     text-decoration: none;
     color: white;
-    background-color: rgb(61, 39, 122);
-    box-shadow: 2px 2px 4px rgba(0 128 128 / .4);
+    background-color: #79bd9a;
+    box-shadow: 2px 2px 4px #a8dba8;
     border-radius: 10px;
     padding: 0 0.8em;
     font-size: 1.4em;
@@ -80,9 +82,14 @@ main h1{padding: 0.6em 5%;}
 
 .under-button{
     text-decoration: none;
-    background-color: rgb(47, 243, 210, .4);
+	color: #3b8686;
+	background-color: rgba(255 255 255 / .2);
     padding: 4vh 6vw;
     margin: 2vh 4vw;
     border-radius: 32px;
     font-size: 4vh;
+	cursor: pointer;
+	user-select: none;
+	border: solid #79bd9a;
+	border-width: 1px;
 }
