@@ -20,17 +20,30 @@
         <p>...</p>
         <p>...</p>
 		
-        <p>値段などの情報を表示</p>
-        <p>...</p>
-        <p>...</p>
-        <p>...</p>
-        <p>...</p>
-		        
-		<p>...</p>
-        <p>...</p>
-        <p>...</p>
-        <p>...</p>
-        <p>...</p>
+		@if (item_data != null)
+		{
+			<table class="table">
+				<thead>
+					<tr>
+						<th>商品名</th>
+						<th>価格(円)</th>
+						<th>個数</th>
+						<th>合計金額(円)</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var item in this.item_data)
+					{
+						<tr>
+							<td>@item.ItemName</td>
+							<td>@item.ItemPrice</td>
+							<td>@item.ItemNum</td>
+							<td>@item.ItemPrices</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		}
       </div>
       <div class="modal-footer">
         <button type="button" class="btn primary-secondary" data-bs-dismiss="modal">閉じる</button>
