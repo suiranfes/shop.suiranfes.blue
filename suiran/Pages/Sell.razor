@@ -5,7 +5,7 @@
 
 <h1>会計</h1>
 
-<!-- Modal -->
+<!-- QR Modal -->
 <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable">
     <div class="modal-content">
@@ -53,6 +53,26 @@
   </div>
 </div>
 
+<!-- AllDel Modal -->
+<div class="modal fade" id="DelModal" tabindex="-1" aria-labelledby="DelModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="DelModalLabel">警告</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>個数のデータがすべて削除されます。</p>
+		<p>(QRコード読み込み後は注文に影響しません。)</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">キャンセル</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" @onclick="AllDel">全削除</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 @if (item_data == null)
 {
     <p><em>読み込み中…</em></p>
@@ -60,7 +80,7 @@
 else
 {
     <div class="footer">
-        <a class="under-button">全削除</a>
+        <a class="under-button" type="button" data-bs-toggle="modal" data-bs-target="#DelModal">全削除</a>
         <a class="under-button" type="button" data-bs-toggle="modal" data-bs-target="#Modal" @onclick="QR">QR表示</a>
     </div>
 
@@ -99,6 +119,18 @@ else
         public int ItemPrice { get; set; }
         public int ItemNum = 0;
         public int ItemPrices => (int)(ItemPrice * ItemNum);
+	}
+
+	private void AllDel()
+	{
+		if (item_data != null)
+		{
+			foreach (var item in this.item_data)
+			{
+				item.ItemNum = 0;
+			}
+		}
+		StateHasChanged();// UIの再描画
 	}
 
 	int AllPrices = 0;
