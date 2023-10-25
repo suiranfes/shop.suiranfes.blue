@@ -44,6 +44,7 @@
 				</tbody>
 			</table>
 		}
+		<p>すべての合計金額: @AllPrices</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn primary-secondary" data-bs-dismiss="modal">閉じる</button>
@@ -60,7 +61,7 @@ else
 {
     <div class="footer">
         <a class="under-button">全削除</a>
-        <a class="under-button" type="button" data-bs-toggle="modal" data-bs-target="#Modal">QR表示</a>
+        <a class="under-button" type="button" data-bs-toggle="modal" data-bs-target="#Modal" @onclick="QR">QR表示</a>
     </div>
 
     @foreach (var item in this.item_data)
@@ -98,6 +99,20 @@ else
         public int ItemPrice { get; set; }
         public int ItemNum = 0;
         public int ItemPrices => (int)(ItemPrice * ItemNum);
+	}
+
+	int AllPrices = 0;
+	private void QR()
+	{
+		AllPrices = 0;
+		if (item_data != null)
+		{
+			foreach (var item in this.item_data)
+			{
+				AllPrices += item.ItemPrices;
+			}
+		}
+		StateHasChanged();// UIの再描画
 	}
 
 	private void Declement(ItemData item)
