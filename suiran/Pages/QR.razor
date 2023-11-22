@@ -1,0 +1,31 @@
+@page "/qr"
+
+<h3>Gerar QRCode</h3>
+<input type="text" @bind="InputText" placeholder="Digite aqui" />
+<br />
+<button class="btn btn-primary" @onclick="GeraQRCode">Gerar QR Code</button>
+<br />
+<hr />
+<img src="@QRCodeStr" style="width:200px;height:200px;"/>
+@code {
+    string InputText { get; set; }
+    string QRCodeStr { get; set; }
+    public void GeraQRCode()
+    {
+        QRCodeStr = "";
+        if (!string.IsNullOrEmpty(InputText))
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                QRCodeGenerator oQRCodeGenerator = new QRCodeGenerator();
+                QRCodeData oQRCodeData = oQRCodeGenerator.CreateQrCode(InputText, QRCodeGenerator.ECCLevel.Q);
+                QRCode oQRCode = new QRCode(oQRCodeData);
+                using (Bitmap oBitmap = oQRCode.GetGraphic(20))
+                {
+                    oBitmap.Save(ms, ImageFormat.Png);
+                    QRCodeStr = "data:image/png;base64," + Convert.ToBase64String(ms.ToArray());
+                }
+            }
+        }
+    }
+}
