@@ -14,11 +14,16 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p>QRコード画像を表示</p>
-        <p>...</p>
-        <p>...</p>
-        <p>...</p>
-        <p>...</p>
+		<center>
+			@if (!string.IsNullOrEmpty(QRCodeStr))
+			{
+				<p><img width="300" height="300" src="@QRCodeStr"></p>
+			}
+			else
+			{
+				<p>QRコード作成中です...</p>
+			}
+		</center>
 		
 		@if (item_data != null)
 		{
@@ -134,8 +139,11 @@ else
 	}
 
 	int AllPrices = 0;
+	string qrContent = "";
+    string QRCodeStr = string.Empty;
 	private void QR()
 	{
+		// 合計金額を求める処理
 		AllPrices = 0;
 		if (item_data != null)
 		{
@@ -144,6 +152,24 @@ else
 				AllPrices += item.ItemPrices;
 			}
 		}
+
+		// QRコード作成処理(遅いので非同期処理にする予定)
+		qrContent = "";
+		if (item_data != null)
+		{
+			foreach (var item in this.item_data)
+			{
+				string temp = "";
+				if (item.ItemName is not null)
+					temp = item.ItemName;
+				qrContent += temp + ", ";
+				qrContent += item.ItemPrice.ToString() + ", ";
+				qrContent += item.ItemNum.ToString() + ", ";
+				qrContent += item.ItemPrices.ToString() + "; ";
+			}
+		}
+        QRCodeStr = GenerateQRCode.GenerateQR(qrContent);
+        // qrContent = string.Empty;
 		StateHasChanged();// UIの再描画
 	}
 
