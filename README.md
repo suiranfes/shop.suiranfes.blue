@@ -1,26 +1,21 @@
-# 翠巒祭会計システム
+# Accounting system for Suiran festival / 翠巒祭会計システム
 
-## 概要
-高崎高校主催の学園祭「翠巒祭」の販売関係で使用する会計システム
+## Summary / 概要
+To use sales for Suiran festicval. / 高崎高校主催の学園祭「翠巒祭」の販売関係で使用する会計システム
 
-## 技術
-### 店舗向けアプリケーション
+## Tech / 技術
 ```
-デザイン/プログラム: Dart?
-フレームワーク: Flutter?
-```
-
-### お客様向けアプリケーション
-```
-デザイン: HTML/CSS
-プログラム: C#(.NET8)
-フレームワーク: Blazor
+Framework / フレームワーク: Blazor wasm (.NET8)
+Syntax / 構文: Razor(HTML + C#)
+Design / デザイン: CSS
 ```
 
-**動作方法**
+**How to move it / 動作方法**
 ```shell
 $ cd suiran
-# dotnetコマンドをインストール
+# install dotnet command: https://learn.microsoft.com/en-us/dotnet/core/install/
+# dotnetコマンドをインストール: https://learn.microsoft.com/ja-jp/dotnet/core/install/
 $ dotnet watch run --pathbase=/suiran
+# access to http://localhost:5291/suiran on your browser
 # http://localhost:5291/suiran にブラウザでアクセス
 ```
