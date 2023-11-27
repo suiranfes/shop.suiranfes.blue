@@ -1,7 +1,7 @@
 # Accounting system for Suiran festival / 翠巒祭会計システム
 
 ## Summary / 概要
-To use sales for Suiran festicval. / 高崎高校主催の学園祭「翠巒祭」の販売関係で使用する会計システム
+To use sales in Suiran festival. / 高崎高校主催の学園祭「翠巒祭」の販売関係で使用する会計システム
 
 ## Tech / 技術
 ```
