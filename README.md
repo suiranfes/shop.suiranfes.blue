@@ -4,13 +4,11 @@
 To use sales in Suiran festival. / 高崎高校主催の学園祭「翠巒祭」の販売関係で使用する会計システム
 
 ## Tech / 技術
-```
-Framework / フレームワーク: Blazor wasm (.NET8)
-Syntax / 構文: Razor(HTML + C#)
-Design / デザイン: CSS
-```
+- Framework / フレームワーク: Blazor wasm (.NET8)
+- Syntax / 構文: Razor(HTML + C#)
+- Design / デザイン: CSS
 
-**How to move it / 動作方法**
+**How to move this application / 動作方法**
 ```shell
 $ cd suiran
 # install dotnet command: https://learn.microsoft.com/en-us/dotnet/core/install/
