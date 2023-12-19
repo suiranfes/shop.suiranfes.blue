@@ -141,7 +141,7 @@ else
 	int AllPrices = 0;
 	string qrContent = "";
     string QRCodeStr = string.Empty;
-	private void QR()
+	private async void QR()
 	{
 		// 合計金額を求める処理
 		AllPrices = 0;
@@ -153,7 +153,7 @@ else
 			}
 		}
 
-		// QRコード作成処理(遅いので非同期処理にする予定)
+		// QRコード作成処理(遅いので非同期処理)
 		qrContent = "";
 		if (item_data != null)
 		{
@@ -168,7 +168,7 @@ else
 				qrContent += item.ItemPrices.ToString() + "; ";
 			}
 		}
-        QRCodeStr = GenerateQRCode.GenerateQR(qrContent);
+		QRCodeStr = await Task.Run(() => GenerateQRCode.GenerateQR(qrContent));
         // qrContent = string.Empty;
 		StateHasChanged();// UIの再描画
 	}
