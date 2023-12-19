@@ -1,4 +1,5 @@
 # Accounting system for school festival / 翠巒祭会計システム
+[![Blazor wasm](https://github.com/mint73/suiran/actions/workflows/main.yml/badge.svg)](https://github.com/mint73/suiran/actions/workflows/main.yml)
 
 ## Summary / 概要
 To use sales in Suiran festival. / 高崎高校主催の学園祭「翠巒祭」の販売関係で使用する会計システム
