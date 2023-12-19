@@ -168,6 +168,7 @@ else
 				qrContent += item.ItemPrices.ToString() + "; ";
 			}
 		}
+		StateHasChanged();// UIの再描画
 		QRCodeStr = await Task.Run(() => GenerateQRCode.GenerateQR(qrContent));
         // qrContent = string.Empty;
 		StateHasChanged();// UIの再描画
