@@ -86,7 +86,7 @@ else
 {
 	<div class="footer">
 		<a class="under-button" type="button" data-bs-toggle="modal" data-bs-target="#DelModal">削除</a>
-		<a class="under-button" type="button" data-bs-toggle="modal" data-bs-target="#Modal" @onclick="() => QR()">QR</a>
+		<a class="under-button" type="button" data-bs-toggle="modal" data-bs-target="#Modal" @onclick="QR">QR</a>
 	</div>
 
     @foreach (var item in this.item_data)
@@ -152,6 +152,7 @@ else
 				AllPrices += item.ItemPrices;
 			}
 		}
+		StateHasChanged();// UIの再描画
 
 		// QRコード作成処理(遅いので非同期処理)
 		qrContent = "";
