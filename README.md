@@ -6,8 +6,7 @@ This is accounting system for the school festival (customer side). / 高崎高�
 
 ## Tech / 技術
 - Framework / フレームワーク: Blazor wasm (.NET8)
-- Syntax / 構文: Razor(HTML + C#)
-- Design / デザイン: CSS
+- Syntax / 構文: Razor(HTML + CSS + C#)
 
 **How to develop this application / 動作方法**
 1. Install dotnet command / dotnetコマンドをインストール<br />
@@ -25,4 +24,4 @@ $ dotnet watch run --pathbase=/suiran
 ```
 
 4. Access on your brouser / ブラウザでアクセス<br />
-ローカルホスト: http://localhost:5291/suiran
+Local Host / ローカルホスト: http://localhost:5291/suiran
