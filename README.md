@@ -18,7 +18,7 @@ $ cd suiran
 
 3. Build this application
 ```shell
-$ dotnet watch run --pathbase=/suiran
+$ dotnet run --pathbase=/suiran
 ```
 
 4. Access on your brouser<br />

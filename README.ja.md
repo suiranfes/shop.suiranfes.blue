@@ -18,7 +18,7 @@ $ cd suiran
 
 3. アプリケーションをビルド
 ```shell
-$ dotnet watch run --pathbase=/suiran
+$ dotnet run --pathbase=/suiran
 ```
 
 4. ブラウザでアクセス<br />
