@@ -18,6 +18,7 @@ main h1{padding: 0.6em 5%;}
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .img{
@@ -41,6 +42,12 @@ main h1{padding: 0.6em 5%;}
 .text div{
     width: 50%;
     padding: 0;
+}
+
+@media (max-width: 720.98px) {
+    .text .text-top{
+        width: 100%;
+    }
 }
 
 .footer{
