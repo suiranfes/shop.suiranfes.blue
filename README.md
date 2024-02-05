@@ -21,5 +21,5 @@ $ cd suiran
 $ dotnet watch run --pathbase=/suiran
 ```
 
-4. Access on your brouser<br />
+4. Access on your browser<br />
 Local Host: http://localhost:5291/suiran
