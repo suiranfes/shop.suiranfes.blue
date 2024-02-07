@@ -3,7 +3,7 @@
 
 [![CI/CD](https://github.com/mint73/suiran/actions/workflows/main.yml/badge.svg)](https://github.com/mint73/suiran/actions/workflows/main.yml)
 
-This is accounting system for the school festival (customer side).
+This is accounting system for the school festival (customer side), built on [Blazor WebAssembly](https://blazor.net).
 
 ## Technology
 - Framework: Blazor wasm (.NET8)
@@ -23,3 +23,6 @@ $ dotnet watch run --pathbase=/suiran
 
 4. Access on your browser<br />
 Local Host: http://localhost:5291/suiran
+
+## License
+[MIT](./LICENSE)

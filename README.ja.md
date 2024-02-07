@@ -3,7 +3,8 @@
 
 [![CI/CD](https://github.com/mint73/suiran/actions/workflows/main.yml/badge.svg)](https://github.com/mint73/suiran/actions/workflows/main.yml)
 
-高崎高校主催の学園祭「翠巒祭」の販売関係で使用する会計システム
+高崎高校主催の学園祭「翠巒祭」の販売関係で使用する会計システムです。
+[Blazor WebAssembly](https://blazor.net) で構築しています。
 
 ## 技術
 - フレームワーク: Blazor wasm (.NET8)
@@ -23,3 +24,6 @@ $ dotnet watch run --pathbase=/suiran
 
 4. ブラウザでアクセス<br />
 ローカルホスト: http://localhost:5291/suiran
+
+## ライセンス
+[MIT](./LICENSE)
