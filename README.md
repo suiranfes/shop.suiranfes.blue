@@ -7,7 +7,7 @@ This is accounting system for the school festival (customer side), built on [Bla
 
 ## Technology
 - Framework: Blazor wasm (.NET8)
-- Syntax: Razor(HTML + CSS + C#)
+- Syntax: Razor (HTML + CSS + C#)
 
 **How to develop this application**
 1. [Install .NET CLI](https://learn.microsoft.com/en-us/dotnet/core/install/)

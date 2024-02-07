@@ -8,7 +8,7 @@
 
 ## 技術
 - フレームワーク: Blazor wasm (.NET8)
-- 構文: Razor(HTML + CSS + C#)
+- 構文: Razor (HTML + CSS + C#)
 
 **動作方法**
 1. [.NET CLIをインストール](https://learn.microsoft.com/ja-jp/dotnet/core/install/)
