@@ -18,11 +18,11 @@ $ cd suiran
 
 3. Build this application
 ```shell
-$ dotnet watch run --pathbase=/suiran
+$ dotnet watch run
 ```
 
 4. Access on your browser<br />
-Local Host: http://localhost:5291/suiran
+Local Host: http://localhost:5291
 
 ## License
 [MIT](./LICENSE)

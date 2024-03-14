@@ -19,11 +19,11 @@ $ cd suiran
 
 3. アプリケーションをビルド
 ```shell
-$ dotnet watch run --pathbase=/suiran
+$ dotnet watch run
 ```
 
 4. ブラウザでアクセス<br />
-ローカルホスト: http://localhost:5291/suiran
+ローカルホスト: http://localhost:5291
 
 ## ライセンス
 [MIT](./LICENSE)
