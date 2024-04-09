@@ -23,6 +23,7 @@ jobs:
       run: |
         cd suiran
         dotnet publish -c Release -o publish
+        cp ../CNAME publish/wwwroot/CNAME
 
     - name: 🚀 Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
