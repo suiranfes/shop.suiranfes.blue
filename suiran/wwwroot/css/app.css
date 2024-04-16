@@ -1,7 +1,58 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
+:root{
+    @media (prefers-color-scheme: light) {
+        --suiran-0: #ffffff;
+        --suiran-1: #cff09e;
+        --suiran-2: #a8dba8;
+        --suiran-3: #79bd9a;
+        --suiran-4: #3b8686;
+    }
+    @media (prefers-color-scheme: dark) {
+        --suiran-0: #183114;
+        --suiran-1: #446129;
+        --suiran-2: #92a65f;
+        --suiran-3: #dcde9f;
+        --suiran-4: #f3f4d3;
+    }
+}
+
+html, main, article, #app{
+    background-color: var(--suiran-0);
+}
+
+.navbar-dark .navbar-brand,
+.modal-content{
+    @media (prefers-color-scheme: dark) {
+        color: var(--suiran-4);
+    }
+}
+
+.alert-secondary{
+    @media (prefers-color-scheme: dark) {
+        background-color: var(--suiran-4);
+        border-color: var(--suiran-3);
+    }
+}
+
+.modal-title,
+.modal-body .table,
+.modal-body p,
+.top-row a:hover{
+    @media (prefers-color-scheme: dark) {
+        color: var(--suiran-0);
+    }
+}
+
+.modal-body center p img{
+    filter: drop-shadow(0px 0px 22px #fff);
+}
+
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    @media (prefers-color-scheme: light) {color: black;}
+    @media (prefers-color-scheme: dark) {color: var(--suiran-4);}
 }
 
 h1:focus {
@@ -9,7 +60,8 @@ h1:focus {
 }
 
 a, .btn-link {
-    color: #0071c1;
+    @media (prefers-color-scheme: light) {color: #0071c1;}
+    @media (prefers-color-scheme: dark) {color: var(--suiran-0);}
 }
 
 .btn-primary {
@@ -84,7 +136,8 @@ a, .btn-link {
     }
 
         .loading-progress circle:last-child {
-            stroke: #3b8686;
+            @media (prefers-color-scheme: light) {stroke: var(--suiran-3);}
+            @media (prefers-color-scheme: dark) {stroke: var(--suiran-2);}
             stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
             transition: stroke-dasharray 0.05s ease-in-out;
         }
@@ -97,5 +150,5 @@ a, .btn-link {
 }
 
     .loading-progress-text:after {
-        content: var(--blazor-load-percentage-text, "Loading");
+        content: var(--blazor-load-percentage-text, "ロード中");
     }
