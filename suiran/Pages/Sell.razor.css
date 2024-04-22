@@ -67,7 +67,7 @@ main h1{padding: 0.6em 5%;}
     justify-content: space-between;
     align-items: center;
 	
-	border: solid var(--suiran-3);
+    @media (prefers-color-scheme: light) {border: solid var(--suiran-3);}
 	border-width: 1px 1px 0 1px;
 }
 
@@ -98,6 +98,6 @@ main h1{padding: 0.6em 5%;}
     font-size: 4vh;
 	cursor: pointer;
 	user-select: none;
-	border: solid var(--suiran-3);
+    @media (prefers-color-scheme: light) {border: solid var(--suiran-3);}
 	border-width: 1px;
 }

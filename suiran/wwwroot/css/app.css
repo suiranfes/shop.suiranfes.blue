@@ -9,11 +9,11 @@
         --suiran-4: #3b8686;
     }
     @media (prefers-color-scheme: dark) {
-        --suiran-0: #183114;
-        --suiran-1: #446129;
-        --suiran-2: #92a65f;
-        --suiran-3: #dcde9f;
-        --suiran-4: #f3f4d3;
+        --suiran-0: rgb(35, 33, 37);
+        --suiran-1: rgb(42, 39, 43);
+        --suiran-2: rgb(50, 46, 51);
+        --suiran-3: rgb(129, 192, 139);
+        --suiran-4: rgb(239, 218, 185);
     }
 }
 
@@ -21,26 +21,36 @@ html, main, article, #app{
     background-color: var(--suiran-0);
 }
 
-.navbar-dark .navbar-brand,
-.modal-content{
+article h1, article{
     @media (prefers-color-scheme: dark) {
         color: var(--suiran-4);
     }
 }
 
-.alert-secondary{
-    @media (prefers-color-scheme: dark) {
-        background-color: var(--suiran-4);
-        border-color: var(--suiran-3);
+@media (prefers-color-scheme: dark) {
+    .modal-dialog,
+    .modal-content,
+    .modal-body table{
+        color: var(--suiran-4);
+        background-color: var(--suiran-1);
     }
-}
-
-.modal-title,
-.modal-body .table,
-.modal-body p,
-.top-row a:hover{
-    @media (prefers-color-scheme: dark) {
-        color: var(--suiran-0);
+    .modal-header,
+    .modal-body table{
+        border-bottom-color: var(--suiran-4);
+    }
+    .modal-footer{
+        border-top-color: var(--suiran-4);
+    }
+    .alert-secondary{
+        background-color: var(--suiran-4);
+        border-color: var(--suiran-2);
+    }
+    .navbar-dark .navbar-brand,
+    .navbar-dark .navbar-brand:hover{
+        color: var(--suiran-4);
+    }
+    .top-row a{
+        color: var(--suiran-3);
     }
 }
 
@@ -61,7 +71,7 @@ h1:focus {
 
 a, .btn-link {
     @media (prefers-color-scheme: light) {color: #0071c1;}
-    @media (prefers-color-scheme: dark) {color: var(--suiran-0);}
+    @media (prefers-color-scheme: dark) {color: var(--suiran-3);}
 }
 
 .btn-primary {
@@ -136,8 +146,7 @@ a, .btn-link {
     }
 
         .loading-progress circle:last-child {
-            @media (prefers-color-scheme: light) {stroke: var(--suiran-3);}
-            @media (prefers-color-scheme: dark) {stroke: var(--suiran-2);}
+            stroke: var(--suiran-3);
             stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
             transition: stroke-dasharray 0.05s ease-in-out;
         }
@@ -147,6 +156,7 @@ a, .btn-link {
     text-align: center;
     font-weight: bold;
     inset: calc(20vh + 3.25rem) 0 auto 0.2rem;
+    @media (prefers-color-scheme: dark) {color: var(--suiran-3);}
 }
 
     .loading-progress-text:after {
