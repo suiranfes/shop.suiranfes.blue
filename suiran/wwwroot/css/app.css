@@ -27,26 +27,30 @@ article h1, article{
     }
 }
 
-.navbar-dark .navbar-brand,
-.modal-content{
-    @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
+    .modal-dialog,
+    .modal-content,
+    .modal-body table{
         color: var(--suiran-4);
+        background-color: var(--suiran-1);
     }
-}
-
-.alert-secondary{
-    @media (prefers-color-scheme: dark) {
+    .modal-header,
+    .modal-body table{
+        border-bottom-color: var(--suiran-4);
+    }
+    .modal-footer{
+        border-top-color: var(--suiran-4);
+    }
+    .alert-secondary{
         background-color: var(--suiran-4);
         border-color: var(--suiran-2);
     }
-}
-
-.modal-title,
-.modal-body .table,
-.modal-body p,
-.top-row a:hover{
-    @media (prefers-color-scheme: dark) {
-        color: var(--suiran-0);
+    .navbar-dark .navbar-brand,
+    .navbar-dark .navbar-brand:hover{
+        color: var(--suiran-4);
+    }
+    .top-row a{
+        color: var(--suiran-3);
     }
 }
 
