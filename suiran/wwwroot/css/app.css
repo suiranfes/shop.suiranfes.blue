@@ -46,7 +46,8 @@ article h1, article{
         border-color: var(--suiran-2);
     }
     .navbar-dark .navbar-brand,
-    .navbar-dark .navbar-brand:hover{
+    .navbar-dark .navbar-brand:hover,
+    .btn{
         color: var(--suiran-4);
     }
     .top-row a{
