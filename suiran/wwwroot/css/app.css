@@ -21,13 +21,17 @@ html, main, article, #app{
     background-color: var(--suiran-0);
 }
 
-article h1, article{
-    @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
+    article,
+    article h1,
+    .navbar-dark .navbar-brand,
+    .navbar-dark .navbar-brand:hover,
+    .btn{
         color: var(--suiran-4);
     }
-}
-
-@media (prefers-color-scheme: dark) {
+    .top-row a{
+        color: var(--suiran-3);
+    }
     .modal-dialog,
     .modal-content,
     .modal-body table{
@@ -44,14 +48,6 @@ article h1, article{
     .alert-secondary{
         background-color: var(--suiran-4);
         border-color: var(--suiran-2);
-    }
-    .navbar-dark .navbar-brand,
-    .navbar-dark .navbar-brand:hover,
-    .btn{
-        color: var(--suiran-4);
-    }
-    .top-row a{
-        color: var(--suiran-3);
     }
 }
 
