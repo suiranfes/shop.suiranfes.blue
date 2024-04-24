@@ -12,10 +12,10 @@ jobs:
 
     steps:
     - name: 🛒 Checkout
-      uses: actions/checkout@v4.1.0
+      uses: actions/checkout@v4
 
     - name: ✨ Setup .NET
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
 
@@ -26,7 +26,7 @@ jobs:
         cp ../CNAME publish/wwwroot/CNAME
 
     - name: 🚀 Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
+      uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: suiran/publish/wwwroot
