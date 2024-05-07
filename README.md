@@ -1,27 +1,28 @@
-# Accounting system for school festival / 翠巒祭会計システム
+# Suiran Accounting System
+- [日本語版](./README.ja.md)
 
-## Summary / 概要
-To use sales in Suiran festival. / 高崎高校主催の学園祭「翠巒祭」の販売関係で使用する会計システム
+[![CI/CD](https://github.com/mint73/suiran/actions/workflows/main.yml/badge.svg)](https://github.com/mint73/suiran/actions/workflows/main.yml)
 
-## Tech / 技術
-- Framework / フレームワーク: Blazor wasm (.NET8)
-- Syntax / 構文: Razor(HTML + C#)
-- Design / デザイン: CSS
+This is accounting system for the school festival (customer side), built on [Blazor WebAssembly](https://blazor.net).
 
-**How to move this application / 動作方法**
-1. Install dotnet command / dotnetコマンドをインストール<br />
-(English: https://learn.microsoft.com/en-us/dotnet/core/install/ <br />
-日本語: https://learn.microsoft.com/ja-jp/dotnet/core/install/)
+## Technology
+- Framework: Blazor wasm (.NET8)
+- Syntax: Razor (HTML + CSS + C#)
 
-2. Move to target directry / 対象ディレクトリに移動
+**How to develop this application**
+1. [Install .NET CLI](https://learn.microsoft.com/en-us/dotnet/core/install/)
+2. Move to target directry
 ```shell
 $ cd suiran
 ```
 
-3. Build this application / アプリケーションをビルド
+3. Build this application
 ```shell
-$ dotnet watch run --pathbase=/suiran
+$ dotnet watch run
 ```
 
-4. Access on your brouser / ブラウザでアクセス<br />
-ローカルホスト: http://localhost:5291/suiran
+4. Access on your browser<br />
+Local Host: http://localhost:5291
+
+## License
+[MIT](./LICENSE)

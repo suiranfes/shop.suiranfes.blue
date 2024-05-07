@@ -1,7 +1,65 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
+:root{
+    @media (prefers-color-scheme: light) {
+        --suiran-0: #ffffff;
+        --suiran-1: #cff09e;
+        --suiran-2: #a8dba8;
+        --suiran-3: #79bd9a;
+        --suiran-4: #3b8686;
+    }
+    @media (prefers-color-scheme: dark) {
+        --suiran-0: rgb(35, 33, 37);
+        --suiran-1: rgb(42, 39, 43);
+        --suiran-2: rgb(50, 46, 51);
+        --suiran-3: rgb(129, 192, 139);
+        --suiran-4: rgb(239, 218, 185);
+    }
+}
+
+html, main, article, #app{
+    background-color: var(--suiran-0);
+}
+
+@media (prefers-color-scheme: dark) {
+    article,
+    article h1,
+    .navbar-dark .navbar-brand,
+    .navbar-dark .navbar-brand:hover,
+    .btn{
+        color: var(--suiran-4);
+    }
+    .top-row a{
+        color: var(--suiran-3);
+    }
+    .modal-dialog,
+    .modal-content,
+    .modal-body table{
+        color: var(--suiran-4);
+        background-color: var(--suiran-1);
+    }
+    .modal-header,
+    .modal-body table{
+        border-bottom-color: var(--suiran-4);
+    }
+    .modal-footer{
+        border-top-color: var(--suiran-4);
+    }
+    .alert-secondary{
+        background-color: var(--suiran-4);
+        border-color: var(--suiran-2);
+    }
+}
+
+.modal-body center p img{
+    filter: drop-shadow(0px 0px 22px #fff);
+}
+
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    @media (prefers-color-scheme: light) {color: black;}
+    @media (prefers-color-scheme: dark) {color: var(--suiran-4);}
 }
 
 h1:focus {
@@ -9,7 +67,8 @@ h1:focus {
 }
 
 a, .btn-link {
-    color: #0071c1;
+    @media (prefers-color-scheme: light) {color: #0071c1;}
+    @media (prefers-color-scheme: dark) {color: var(--suiran-3);}
 }
 
 .btn-primary {
@@ -64,7 +123,7 @@ a, .btn-link {
 }
 
     .blazor-error-boundary::after {
-        content: "An error has occurred."
+        content: "エラーが発生しました。"
     }
 
 .loading-progress {
@@ -84,7 +143,7 @@ a, .btn-link {
     }
 
         .loading-progress circle:last-child {
-            stroke: #3b8686;
+            stroke: var(--suiran-3);
             stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
             transition: stroke-dasharray 0.05s ease-in-out;
         }
@@ -94,8 +153,9 @@ a, .btn-link {
     text-align: center;
     font-weight: bold;
     inset: calc(20vh + 3.25rem) 0 auto 0.2rem;
+    @media (prefers-color-scheme: dark) {color: var(--suiran-3);}
 }
 
     .loading-progress-text:after {
-        content: var(--blazor-load-percentage-text, "Loading");
+        content: var(--blazor-load-percentage-text, "ロード中");
     }

@@ -1,7 +1,7 @@
 [
   {
     "itemName": "焼きそば",
-    "itemPrice": 300
+    "itemPrice": 350
   },
   {
     "itemName": "フランクフルト",
@@ -9,10 +9,14 @@
   },
   {
     "itemName": "チュロス",
-    "itemPrice": 200
+    "itemPrice": 250
   },
   {
-    "itemName": "アイスチョコバナナ",
+    "itemName": "クレープ",
+    "itemPrice": 300
+  },
+  {
+    "itemName": "チョコバナナ",
     "itemPrice": 300
   },
   {
@@ -22,6 +26,10 @@
   {
     "itemName": "かき氷",
     "itemPrice": 200
+  },
+  {
+    "itemName": "肉巻きおにぎり",
+    "itemPrice": 350
   },
   {
     "itemName": "ドリンク",

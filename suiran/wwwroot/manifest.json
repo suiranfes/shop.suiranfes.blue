@@ -1,6 +1,6 @@
 {
-  "name": "翠巒祭 模擬店",
-  "short_name": "翠巒祭 模擬店",
+  "name": "翠巒祭 会計システム",
+  "short_name": "翠巒祭 会計システム",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",

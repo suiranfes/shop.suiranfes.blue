@@ -1,5 +1,5 @@
 :root{
-    color: #3b8686;
+    color: var(--suiran-4);
 
     /* 後でNoto Sans入れる */
     font-family: sans-serif;
@@ -9,22 +9,24 @@ body, main, main h1{margin: 0;}
 main h1{padding: 0.6em 5%;}
 
 .item, .item p{
-    color: #3b8686;
-    background-color: #cff09e;
+    color: var(--suiran-4);
+    background-color: var(--suiran-1);
     border-radius: 18px;
-    box-shadow: 2px 4px #a8dba8;
+    box-shadow: 2px 4px var(--suiran-2);
     padding: 12px;
     margin: 12px 5%;
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .img{
     /* margin: 0 10px 0 0; */
     width: 10vh;
     height: 10vh;
-    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    background-color: var(--suiran-0);
 }
 
 .text{
@@ -43,6 +45,12 @@ main h1{padding: 0.6em 5%;}
     padding: 0;
 }
 
+@media (max-width: 720.98px) {
+    .text .text-top{
+        width: 100%;
+    }
+}
+
 .footer{
     /*width: 100%;*/
     height: 20vh;
@@ -59,15 +67,15 @@ main h1{padding: 0.6em 5%;}
     justify-content: space-between;
     align-items: center;
 	
-	border: solid #79bd9a;
+    @media (prefers-color-scheme: light) {border: solid var(--suiran-3);}
 	border-width: 1px 1px 0 1px;
 }
 
 .button{
     text-decoration: none;
-    color: white;
-    background-color: #79bd9a;
-    box-shadow: 2px 2px 4px #a8dba8;
+    color: var(--suiran-0);
+    background-color: var(--suiran-3);
+    box-shadow: 2px 2px 4px var(--suiran-2);
     border-radius: 10px;
     padding: 0 0.8em;
     font-size: 1.4em;
@@ -82,7 +90,7 @@ main h1{padding: 0.6em 5%;}
 
 .under-button{
     text-decoration: none;
-	color: #3b8686;
+	color: var(--suiran-4);
 	background-color: rgba(255 255 255 / .2);
     padding: 4vh 6vw;
     margin: 2vh 4vw;
@@ -90,6 +98,6 @@ main h1{padding: 0.6em 5%;}
     font-size: 4vh;
 	cursor: pointer;
 	user-select: none;
-	border: solid #79bd9a;
+    @media (prefers-color-scheme: light) {border: solid var(--suiran-3);}
 	border-width: 1px;
 }

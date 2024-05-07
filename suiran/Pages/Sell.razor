@@ -84,28 +84,28 @@
 }
 else
 {
-    <div class="footer">
-        <a class="under-button" type="button" data-bs-toggle="modal" data-bs-target="#DelModal">削除</a>
-        <a class="under-button" type="button" data-bs-toggle="modal" data-bs-target="#Modal" @onclick="QR">QR</a>
-    </div>
+	<div class="footer">
+		<a class="under-button" type="button" data-bs-toggle="modal" data-bs-target="#DelModal">削除</a>
+		<a class="under-button" type="button" data-bs-toggle="modal" data-bs-target="#Modal" @onclick="QR">QR</a>
+	</div>
 
-    @foreach (var item in this.item_data)
-    {
-	     <div class="item" @key="item.ItemName">
-				<div class="img"></div>
+	@foreach (var item in this.item_data)
+	{
+		<div class="item" @key="item.ItemName">
+			<div class="img"></div>
 
-				<div class="text">
-					<div>@item.ItemName</div>
-					<div>
-						<a class="button" @onclick="() => Declement(item)" oncontextmenu="return false;">-</a>
-							@item.ItemNum 
-						<a class="button" @onclick="() => Plus(item)" oncontextmenu="return false;">+</a>
-					</div>
-					<div>1個: @item.ItemPrice 円</div>
-					<div>計: @item.ItemPrices 円</div>
+			<div class="text">
+				<div class="text-top">@item.ItemName</div>
+				<div class="text-top">
+					<a class="button" @onclick="() => Declement(item)" oncontextmenu="return false;">-</a>
+						@item.ItemNum 
+					<a class="button" @onclick="() => Plus(item)" oncontextmenu="return false;">+</a>
 				</div>
-        </div>
-    }
+				<div>1個: @item.ItemPrice 円</div>
+				<div>計: @item.ItemPrices 円</div>
+			</div>
+		</div>
+	}
 }
 
 <div style="height: 20vh;"></div>
@@ -140,7 +140,7 @@ else
 
 	int AllPrices = 0;
 	string qrContent = "";
-    string QRCodeStr = string.Empty;
+	string QRCodeStr = string.Empty;
 	private void QR()
 	{
 		// 合計金額を求める処理
@@ -168,8 +168,8 @@ else
 				qrContent += item.ItemPrices.ToString() + "; ";
 			}
 		}
-        QRCodeStr = GenerateQRCode.GenerateQR(qrContent);
-        // qrContent = string.Empty;
+		QRCodeStr = GenerateQRCode.GenerateQR(qrContent);
+		// qrContent = string.Empty;
 		StateHasChanged();// UIの再描画
 	}
 

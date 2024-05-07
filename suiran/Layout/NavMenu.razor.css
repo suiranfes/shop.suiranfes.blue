@@ -32,7 +32,12 @@
     }
 
     .nav-item ::deep a {
-        color: #d7d7d7;
+        @media (prefers-color-scheme: light) {
+            color: #d7d7d7;
+        }
+        @media (prefers-color-scheme: dark) {
+            color: var(--suiran-4);
+        }
         border-radius: 4px;
         height: 3rem;
         display: flex;
@@ -41,13 +46,25 @@
     }
 
 .nav-item ::deep a.active {
-    background-color: rgba(255,255,255,0.25);
-    color: white;
+    @media (prefers-color-scheme: light) {
+        background-color: rgba(255,255,255,0.25);
+        color: white;
+    }
+    @media (prefers-color-scheme: dark) {
+        background-color: rgba(129, 192, 139, 0.15);
+        color: var(--suiran-3);
+    }
 }
 
 .nav-item ::deep a:hover {
-    background-color: rgba(255,255,255,0.1);
-    color: white;
+    @media (prefers-color-scheme: light) {
+        background-color: rgba(255,255,255,0.1);
+        color: white;
+    }
+    @media (prefers-color-scheme: dark) {
+        background-color: rgba(129, 192, 139, 0.15);
+        color: var(--suiran-3);
+    }
 }
 
 @media (min-width: 641px) {
