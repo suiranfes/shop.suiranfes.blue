@@ -17,6 +17,11 @@
     }
 }
 
+::selection{
+    color: white;
+    background-color: var(--suiran-3);
+}
+
 html, main, article, #app{
     background-color: var(--suiran-0);
 }
