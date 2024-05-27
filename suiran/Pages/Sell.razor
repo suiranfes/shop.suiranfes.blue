@@ -123,7 +123,10 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        item_data = await Http.GetFromJsonAsync<ItemData[]>("sample-data/item.json");
+		// Ignore the cache of `sample-data/item.json`
+        var cacheBuster = new DateTime().ToString("yyyyMMddHHmmss");
+        var url = $"sample-data/item.json?{cacheBuster}";
+        item_data = await Http.GetFromJsonAsync<ItemData[]>(url);
     }
 
     public class ItemData
