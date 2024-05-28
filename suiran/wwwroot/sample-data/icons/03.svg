@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg width="368.64pt" height="368.64pt"
+     viewBox="0 0 368.64 368.64"
+     version="1.1"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+     <style>
+      g{
+        @media (prefers-color-scheme: light) {
+          stroke: #3b8686;
+          fill: #3b8686;
+        }
+        @media (prefers-color-scheme: dark) {
+          stroke: rgb(239, 218, 185);
+          fill: rgb(239, 218, 185);
+        }
+      }
+    </style>
+  <g transform="matrix(0.89646597,0.72272008,-0.71480566,0.90639174,151.28604,-99.178905)"
+     style="stroke-miterlimit:4;stroke-dasharray:none">
+    <ellipse
+       transform="translate(146.88,22.32)"
+       rx="31.32" ry="17.280001"
+       cx="31.32" cy="17.280001"
+       fill="none"
+       stroke-width="8.2944"
+       stroke-linecap="square"
+       stroke-linejoin="bevel" />
+    <path
+       transform="translate(146.57536,42.225461)"
+       fill="none"
+       stroke-width="8.2944"
+       stroke-linecap="square"
+       stroke-linejoin="miter"
+       stroke-miterlimit="2"
+       d="M 0,0 1.76601,261.343" />
+    <path
+       fill="none"
+       stroke-width="8.2944"
+       stroke-linecap="square"
+       stroke-linejoin="miter"
+       stroke-miterlimit="2"
+       d="m 209.19662,41.689118 1.81175,264.072002" />
+    <path
+       stroke-linecap="square"
+       stroke-linejoin="bevel"
+       stroke-miterlimit="4"
+       style="stroke-dasharray:none"
+       d="m 275.43555,389.33008 c 0.51757,21.07031 0,0 0.51757,21.07031 0,4.84756 -3.15354,9.78705 -9.6621,13.87891 -6.50856,4.09186 -16.05826,6.86914 -26.69532,6.86914 -10.63705,0 -20.1887,-2.77728 -26.69726,-6.86914 -6.12099,-3.84819 -9.27126,-8.4458 -9.625,-13.01172 l -0.34571,-21.27344 v 0 c -7.48731,2.96633 -10.76367,12.32983 -10.76367,20.40625 0,9.69907 6.22443,17.93012 14.87891,23.37109 8.65449,5.44099 20.05177,8.5586 32.55273,8.5586 12.50096,0 23.89824,-3.11761 32.55274,-8.5586 8.65448,-5.44097 14.88087,-13.67202 14.88086,-23.37109 0,-8.41855 -3.00875,-19.62015 -11.59375,-21.07031 z"
+       transform="scale(0.75)" />
+  </g>
+</svg>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg width="512" height="512"
+     viewBox="0 0 512 512"
+     version="1.1"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+     <style>
+      g{
+        @media (prefers-color-scheme: light) {
+          stroke: #3b8686;
+        }
+        @media (prefers-color-scheme: dark) {
+          stroke: rgb(239, 218, 185);
+        }
+      }
+    </style>
+    <g transform="matrix(1.1176595,0,0,1.1046245,-33.552831,-43.449641)"
+       style="fill:none;stroke-width:8.9999;stroke-miterlimit:4;stroke-dasharray:none">
+      <path style="stroke-linecap:butt;stroke-linejoin:miter;;stroke-opacity:1"
+            d="m 165.99014,168.25238 c -25.81844,-12.34551 21.50478,295.19204 21.50478,295.19204 h 146.53603 c 0,0 51.77408,-302.11243 22.58927,-294.72537 -190.63008,-0.46667 0,0 -190.63008,-0.46667 z"  />
+      <rect width="32.121563" height="93.037704"
+            x="297.70401" y="75.755745"
+            ry="7.0063491" />
+      <path style="stroke-linecap:butt;stroke-linejoin:miter;;stroke-opacity:1"
+            d="m 164.35667,266.18281 197.13268,0.98358"  />
+      <rect width="45.640308" height="46.74226"
+            x="93.58004" y="387.88486"
+            ry="6.406064"
+            transform="rotate(-14.975814)" />
+      <rect width="45.640308" height="46.74226"
+            x="328.65311" y="-281.42303"
+            ry="6.406064"
+            transform="rotate(83.988631)" />
+      <rect width="45.640308" height="46.74226"
+            x="428.45871" y="201.88152"
+            ry="6.406064"
+            transform="rotate(27.8927)" />
+    </g>
+</svg>
