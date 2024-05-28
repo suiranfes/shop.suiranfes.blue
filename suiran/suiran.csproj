@@ -10,12 +10,8 @@
     <WasmEnableSIMD>false</WasmEnableSIMD>
 
     <!-- Compression -->
-    <IsTrimmable>true</IsTrimmable>
-    <PublishTrimmed>true</PublishTrimmed>
-    <TrimUnusedComponents>true</TrimUnusedComponents>
     <InvariantGlobalization>true</InvariantGlobalization>
     <BlazorEnableTimeZoneSupport>false</BlazorEnableTimeZoneSupport>
-    <BlazorWebAssemblyEnableLinking>true</BlazorWebAssemblyEnableLinking>
   </PropertyGroup>
 
   <ItemGroup>
