@@ -6,7 +6,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
 
+    <!-- Support ios/safari -->
     <WasmEnableSIMD>false</WasmEnableSIMD>
+
+    <!-- Compression -->
+    <IsTrimmable>true</IsTrimmable>
+    <PublishTrimmed>true</PublishTrimmed>
+    <TrimUnusedComponents>true</TrimUnusedComponents>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <BlazorEnableTimeZoneSupport>false</BlazorEnableTimeZoneSupport>
+    <BlazorWebAssemblyEnableLinking>true</BlazorWebAssemblyEnableLinking>
   </PropertyGroup>
 
   <ItemGroup>
