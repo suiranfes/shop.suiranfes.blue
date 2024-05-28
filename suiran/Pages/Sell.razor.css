@@ -90,14 +90,18 @@ main h1{padding: 0.6em 5%;}
 
 .under-button{
     text-decoration: none;
-	color: var(--suiran-4);
-	background-color: rgba(255 255 255 / .2);
-    padding: 4vh 6vw;
+    color: var(--suiran-4);
+    background-color: rgba(255 255 255 / .2);
+    padding: 4vh 10vw;
     margin: 2vh 4vw;
     border-radius: 32px;
     font-size: 4vh;
-	cursor: pointer;
-	user-select: none;
+    cursor: pointer;
+    user-select: none;
     @media (prefers-color-scheme: light) {border: solid var(--suiran-3);}
-	border-width: 1px;
+    border-width: 1px;
+}
+
+.under-button svg {
+    fill: var(--suiran-4);
 }

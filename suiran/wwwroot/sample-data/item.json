@@ -1,19 +1,15 @@
 [
   {
-    "itemName": "焼きそば",
-    "itemPrice": 350
-  },
-  {
-    "itemName": "フランクフルト",
+    "itemName": "チュロス",
     "itemPrice": 200
   },
   {
-    "itemName": "チュロス",
-    "itemPrice": 250
+    "itemName": "かき氷",
+    "itemPrice": 200
   },
   {
-    "itemName": "クレープ",
-    "itemPrice": 300
+    "itemName": "ペットボトル",
+    "itemPrice": 150
   },
   {
     "itemName": "チョコバナナ",
@@ -24,11 +20,15 @@
     "itemPrice": 350
   },
   {
-    "itemName": "かき氷",
+    "itemName": "フランクフルト",
     "itemPrice": 200
   },
   {
-    "itemName": "肉巻きおにぎり",
+    "itemName": "焼きそば",
+    "itemPrice": 300
+  },
+  {
+    "itemName": "クレープ",
     "itemPrice": 350
   },
   {
@@ -36,7 +36,7 @@
     "itemPrice": 300
   },
   {
-    "itemName": "ペットボトル",
-    "itemPrice": 150
+    "itemName": "肉巻きおにぎり",
+    "itemPrice": 400
   }
 ]
