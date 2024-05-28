@@ -100,7 +100,7 @@ else
 	@foreach (var item in this.item_data)
 	{
 		<div class="item" @key="item.ItemName">
-			<div class="img"></div>
+			<div class="img" style="background-image: url('@item.ItemImage')"></div>
 
 			<div class="text">
 				<div class="text-top">@item.ItemName</div>
@@ -135,6 +135,7 @@ else
         public int ItemPrice { get; set; }
         public int ItemNum = 0;
         public int ItemPrices => (int)(ItemPrice * ItemNum);
+		public string? ItemImage { get; set; }
 	}
 
 	private void AllDel()
