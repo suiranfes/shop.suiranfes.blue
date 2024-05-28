@@ -2,10 +2,60 @@
 
 <PageTitle>翠巒祭</PageTitle>
 
-<h1>ようこそ!</h1>
+<center id="center-area">
+    <h2>@headerArea</h2>
+    <div id="div-img"><img alt="説明画像" id="image-area" /></div>
+    <p id="description-area">@((MarkupString)textArea)</p>
+    <button @onclick="previous"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M220-240v-480h80v480h-80Zm520 0L380-480l360-240v480Zm-80-240Zm0 90v-180l-136 90 136 90Z"/></svg></button>
+    <button @onclick="next"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M660-240v-480h80v480h-80Zm-440 0v-480l360 240-360 240Zm80-240Zm0 90 136-90-136-90v180Z"/></svg></button>
+</center>
 
-こちらは翠巒祭用会計アプリケーションです。
+@code{
+    int page = 0;
+    string headerArea = "";
+    string textArea = "";
 
-スマートフォンでご利用の方は、右上の"三本線マーク"を押して、"使い方"をご覧ください。
+    string[] harerAreaTexts = {
+        "ようこそ!",
+        "はじめに",
+        "会計ページ",
+        "注文内容を選択",
+        "QR コードを表示",
+        "最後に"
+    };
 
-<SurveyPrompt Title="開発者向け情報" />
+    string[] textAreaTexts = {
+        "こちらは翠巒祭用会計アプリケーションです。<br />本アプリケーションは、模擬店 (外: 校舎正面側) で利用可能です。",
+        "何らかの要因により、突然システムが使えなくなる可能性があります。<br />その際はお手数ですが、アナログな方法で対応しますので、お店の指示を優先してください。",
+        "右上の\"三本線マーク\"を押し、\"会計\"を選択してください。",
+        "<kbd>+</kbd>ボタンや<kbd>-</kbd>ボタンで購入する商品の個数を変更できます。 (ページを変更すると選択内容がリセットされますのでご注意ください。)<br />ヒント: 左下のボタンですべての内容をリセットできます。",
+        "注文内容が決まったら、右下のボタンをクリックし、 QR コードを表示してください。<br />注文内容は QR コード読み込み時に決定します。店が読み込みを行う前はいくらでも変更可能です。",
+        "会計のご協力、よろしくお願いします。<br />このアプリケーションは<a href=\"https://github.com/suiranfes\">翠巒祭 実行委員会</a>によって作成されました。"
+    };
+
+	protected override void OnInitialized()
+	{
+        changePages(page);
+	}
+
+    private void next(){
+        if (page == headerArea.Length - 1 || page == textAreaTexts.Length - 1)
+            return;
+        page++;
+        changePages(page);
+    }
+
+    private void previous(){
+        if (page == 0)
+            return;
+        page--;
+        changePages(page);
+    }
+
+    private void changePages(int _page){
+        headerArea = harerAreaTexts[_page];
+        textArea = textAreaTexts[_page];
+    }
+}
+
+@* <SurveyPrompt Title="開発者向け情報" /> *@
