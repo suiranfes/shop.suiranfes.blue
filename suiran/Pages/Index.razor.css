@@ -25,6 +25,11 @@ button svg path{
     height: 40vh;
 }
 
+#image-area{
+    width: inherit;
+    height: inherit;
+}
+
 #description-area{
     height: 20vh;
     text-align: left;
