@@ -1,0 +1,32 @@
+[
+  {
+    "docsTitle": "1. ようこそ!",
+    "docsDescription": "翠巒祭 模擬店班の会計アプリケーションです。<br />食券売り場 (校舎外/校舎正面側) で利用できます。",
+    "docsImage": ""
+  },
+  {
+    "docsTitle": "2. はじめに",
+    "docsDescription": "注意: 何らかの要因により、突然システムが使えなくなる可能性があります。<br />その際はお手数ですが、アナログな方法で対応しますので、お店の指示を優先してください。",
+    "docsImage": ""
+  },
+  {
+    "docsTitle": "3. 会計ページ",
+    "docsDescription": "右上の\"三本線マーク\"を押し、\"会計\"を選択することで会計ページを開けます。<br />(この後のページをすべて読み終わったら開いてください。)",
+    "docsImage": ""
+  },
+  {
+    "docsTitle": "4. 注文内容を選択",
+    "docsDescription": "<kbd>+</kbd>ボタンや<kbd>-</kbd>ボタンで購入する商品の個数を変更できます。<br />注意: ページを変更すると選択内容がリセットされますのでご注意ください。<br />ヒント: 左下のボタンですべての内容をリセットできます。",
+    "docsImage": ""
+  },
+  {
+    "docsTitle": "5. QR コードを表示",
+    "docsDescription": "注文内容が決まったら、右下のボタンをクリックし、 QR コードを表示してください。表示出来たら食券売り場の店の人が読み取ります。<br />ヒント: 注文内容は QR コード読み込み時に決定します。店が読み込みを行う前はいくらでも変更可能です。",
+    "docsImage": ""
+  },
+  {
+    "docsTitle": "6. 最後に",
+    "docsDescription": "会計のご協力、よろしくお願いします。<br /><br />このアプリケーションは<a href=\"https://github.com/suiranfes\" target=\"_blank\">翠巒祭 実行委員</a>によって作成されました。プログラムは<a href=\"https://github.com/suiranfes/shop.suiranfes.blue\" target=\"_blank\">こちら</a>に管理されています。",
+    "docsImage": ""
+  }
+]
