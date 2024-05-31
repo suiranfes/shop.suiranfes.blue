@@ -9,6 +9,11 @@ self.addEventListener('fetch', (event) => {
         event.respondWith(
             fetch(event.request).catch(() => caches.match(event.request))
         );
+    // Ignore the cache of `/sample-data/docs.json`
+    } else if (url.pathname.startsWith('/sample-data/docs.json')) {
+        event.respondWith(
+            fetch(event.request).catch(() => caches.match(event.request))
+        );
     } else {
         event.respondWith(
             caches.match(event.request).then((response) => {
