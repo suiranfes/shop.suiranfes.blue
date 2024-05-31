@@ -24,20 +24,20 @@
        rx="31.32" ry="17.280001"
        cx="31.32" cy="17.280001"
        fill="none"
-       stroke-width="8.2944"
+       stroke-width="12"
        stroke-linecap="square"
        stroke-linejoin="bevel" />
     <path
        transform="translate(146.57536,42.225461)"
        fill="none"
-       stroke-width="8.2944"
+       stroke-width="12"
        stroke-linecap="square"
        stroke-linejoin="miter"
        stroke-miterlimit="2"
        d="M 0,0 1.76601,261.343" />
     <path
        fill="none"
-       stroke-width="8.2944"
+       stroke-width="12"
        stroke-linecap="square"
        stroke-linejoin="miter"
        stroke-miterlimit="2"
