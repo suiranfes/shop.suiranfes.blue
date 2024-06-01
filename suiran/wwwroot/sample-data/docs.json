@@ -17,7 +17,7 @@
   {
     "docsTitle": "4. 注文内容を選択",
     "docsDescription": "<kbd>+</kbd>ボタンや<kbd>-</kbd>ボタンで購入する商品の個数を変更できます。<br />注意: ページを変更すると選択内容がリセットされますのでご注意ください。<br />ヒント: 左下のボタンですべての内容をリセットできます。",
-    "docsImage": "sample-data/docs/void.svg"
+    "docsImage": "sample-data/docs/04.svg"
   },
   {
     "docsTitle": "5. QR コードを表示",
