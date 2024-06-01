@@ -31,7 +31,7 @@ button svg path{
 }
 
 #description-area{
-    height: 20vh;
+    height: 9rem;
     text-align: left;
     overflow-y: auto;
 }
