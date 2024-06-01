@@ -1,4 +1,6 @@
 @page "/sell"
+@using Blazored.SessionStorage
+@inject ISessionStorageService sessionStorage
 @inject HttpClient Http
 
 <PageTitle>会計 | 翠巒祭</PageTitle>
@@ -127,6 +129,15 @@ else
         var cacheBuster = new DateTime().ToString("yyyyMMddHHmmss");
         var url = $"sample-data/item.json?{cacheBuster}";
         item_data = await Http.GetFromJsonAsync<ItemData[]>(url);
+
+		if (item_data != null)
+			foreach (var item in this.item_data)
+			{
+				if(int.TryParse(await sessionStorage.GetItemAsync<string>("data-" + item.ItemName), out int c))
+					item.ItemNum = c;
+				else
+					item.ItemNum = 0;
+			}
     }
 
     public class ItemData
@@ -185,16 +196,20 @@ else
 		StateHasChanged();// UIの再描画
 	}
 
-	private void Declement(ItemData item)
+	private async void Declement(ItemData item)
 	{
 		if (item.ItemNum != 0)
+		{
 			item.ItemNum--;
+			await sessionStorage.SetItemAsStringAsync("data-" + item.ItemName, "");
+		}
 		StateHasChanged();// UIの再描画
 	}
 
-	private void Plus(ItemData item)
+	private async void Plus(ItemData item)
 	{
 		item.ItemNum++;
+		await sessionStorage.SetItemAsStringAsync("data-" + item.ItemName, item.ItemNum.ToString());
 		StateHasChanged();// UIの再描画
 	}
 }
