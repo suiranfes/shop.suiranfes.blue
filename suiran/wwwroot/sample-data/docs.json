@@ -25,7 +25,12 @@
     "docsImage": "sample-data/docs/05.svg"
   },
   {
-    "docsTitle": "6. 最後に",
+    "docsTitle": "6. クレープの提供について",
+    "docsDescription": "こちらの会計システムとは関係ありませんが、クレープの提供は時間がかかります。ご注意ください。",
+    "docsImage": "sample-data/docs/02.svg"
+  },
+  {
+    "docsTitle": "7. 最後に",
     "docsDescription": "会計のご協力、よろしくお願いします。<br /><br />このアプリケーションは<a href=\"https://github.com/suiranfes\" target=\"_blank\">翠巒祭 実行委員</a>によって作成されました。プログラムは<a href=\"https://github.com/suiranfes/shop.suiranfes.blue\" target=\"_blank\">こちら</a>に管理されています。",
     "docsImage": "sample-data/docs/void.svg"
   }
