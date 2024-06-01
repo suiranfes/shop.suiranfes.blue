@@ -17,6 +17,17 @@
             stroke: rgb(239, 218, 185);
          }
       }
+      #c,
+      #d{
+         @media (prefers-color-scheme: light) {
+            fill: #79bd9a;
+            stroke: #79bd9a;
+         }
+         @media (prefers-color-scheme: dark) {
+            fill: rgb(129, 192, 139);
+            stroke: rgb(129, 192, 139);
+         }
+      }
    </style>
     <rect style="fill:none;stroke-width:9.22287;stroke-linecap:round;stroke-linejoin:bevel"
           width="301.02399" height="451.95435"
