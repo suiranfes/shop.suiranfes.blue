@@ -59,7 +59,8 @@ main h1{padding: 0.6em 5%;}
     height: 20vh;
     margin: -10vh 0;
     /*padding: 0;*/
-    background-color: rgba(0, 0, 0, 0.2);
+    @media (prefers-color-scheme: light) {background-color: rgba(255, 255, 255, 0.2);}
+    @media (prefers-color-scheme: dark) {background-color: rgba(0, 0, 0, 0.2);}
     backdrop-filter: blur(10px);
     border-radius: 46px 46px 0px 0px;
 
@@ -69,9 +70,9 @@ main h1{padding: 0.6em 5%;}
     display: flex;
     justify-content: space-between;
     align-items: center;
-	
+
     @media (prefers-color-scheme: light) {border: solid var(--suiran-3);}
-	border-width: 1px 1px 0 1px;
+    border-width: 1px 1px 0 1px;
 }
 
 .button{
@@ -94,7 +95,8 @@ main h1{padding: 0.6em 5%;}
 .under-button{
     text-decoration: none;
     color: var(--suiran-4);
-    background-color: rgba(0, 0, 0, 0.2);
+    @media (prefers-color-scheme: light) {background-color: rgba(255, 255, 255, 0.2);}
+    @media (prefers-color-scheme: dark) {background-color: rgba(0, 0, 0, 0.2);}
     padding: 4vh 10vw;
     margin: 2vh 4vw;
     border-radius: 32px;
