@@ -59,6 +59,7 @@
         headerArea = docs_data[_page].DocsTitle ?? "";
         textArea = docs_data[_page].DocsDescription ?? "";
         imageArea = docs_data[_page].DocsImage ?? "";
+        visibility = (imageArea == "") ? "hidden" : "visible";
     }
 }
 
