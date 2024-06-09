@@ -7,8 +7,8 @@
     <h2>@headerArea</h2>
     <div id="div-img"><img src="@imageArea" id="image-area" role="img" style="visibility: @visibility;" /></div>
     <p id="description-area">@((MarkupString)textArea)</p>
-    <button @onclick="previous"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M220-240v-480h80v480h-80Zm520 0L380-480l360-240v480Zm-80-240Zm0 90v-180l-136 90 136 90Z"/></svg></button>
-    <button @onclick="next"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M660-240v-480h80v480h-80Zm-440 0v-480l360 240-360 240Zm80-240Zm0 90 136-90-136-90v180Z"/></svg></button>
+    <button @onclick="Previous"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M220-240v-480h80v480h-80Zm520 0L380-480l360-240v480Zm-80-240Zm0 90v-180l-136 90 136 90Z"/></svg></button>
+    <button @onclick="Next"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M660-240v-480h80v480h-80Zm-440 0v-480l360 240-360 240Zm80-240Zm0 90 136-90-136-90v180Z"/></svg></button>
 </center>
 
 @code{
@@ -22,7 +22,7 @@
         docs_data = await Http.GetFromJsonAsync<DocsData[]>(url);
 
         visibility = "visible";
-        changePages(page);
+        ChangePages(page);
     }
 
     public class DocsData
@@ -39,21 +39,21 @@
 
     string visibility = "hidden"; // for quick show
 
-    private void next(){
+    private void Next(){
         if (docs_data != null && page == docs_data.Length - 1)
             return;
         page++;
-        changePages(page);
+        ChangePages(page);
     }
 
-    private void previous(){
+    private void Previous(){
         if (page == 0)
             return;
         page--;
-        changePages(page);
+        ChangePages(page);
     }
 
-    private void changePages(int _page){
+    private void ChangePages(int _page){
         if (docs_data == null)
             return;
         headerArea = docs_data[_page].DocsTitle ?? "";
