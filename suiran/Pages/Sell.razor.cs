@@ -8,8 +8,8 @@ namespace suiran.Pages;
 public partial class SellBase : ComponentBase
 {
     [Inject]
-    HttpClient? Http { get; set; }
-    ISessionStorageService? SessionStorage { get; set; }
+    public HttpClient? Http { get; set; }
+    public ISessionStorageService? SessionStorage { get; set; }
 
     public ItemData[]? item_data;
 
