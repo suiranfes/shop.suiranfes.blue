@@ -12,18 +12,20 @@ public partial class SellBase : ComponentBase
     [Inject]
     public ISessionStorageService? SessionStorage { get; set; }
 
-    public ItemData[]? item_data;
+    public ItemData[]? itemData;
 
     protected override async Task OnInitializedAsync()
     {
-        // Ignore the cache of `sample-data/item.json`
+        // Read json file
+        // (Ignore the cache of `sample-data/item.json`)
         var cacheBuster = new DateTime().ToString("yyyyMMddHHmmss");
         var url = $"sample-data/item.json?{cacheBuster}";
         if (Http != null)
-            item_data = await Http.GetFromJsonAsync<ItemData[]>(url);
+            itemData = await Http.GetFromJsonAsync<ItemData[]>(url);
 
-        if (item_data != null)
-            foreach (var item in item_data)
+        // Load session storage
+        if (itemData != null)
+            foreach (var item in itemData)
             {
                 if (SessionStorage != null && int.TryParse(await SessionStorage.GetItemAsync<string>("data-" + item.ItemName), out int outData))
                     item.ItemNum = outData;
@@ -43,9 +45,9 @@ public partial class SellBase : ComponentBase
 
     public void AllDel()
     {
-        if (item_data != null)
+        if (itemData != null)
         {
-            foreach (var item in item_data)
+            foreach (var item in itemData)
             {
                 item.ItemNum = 0;
             }
@@ -60,9 +62,9 @@ public partial class SellBase : ComponentBase
     {
         // 合計金額を求める処理
         AllPrices = 0;
-        if (item_data != null)
+        if (itemData != null)
         {
-            foreach (var item in item_data)
+            foreach (var item in itemData)
             {
                 AllPrices += item.ItemPrices;
             }
@@ -70,9 +72,9 @@ public partial class SellBase : ComponentBase
 
         // QRコード作成処理(遅いので非同期処理にする予定)
         qrContent = "";
-        if (item_data != null)
+        if (itemData != null)
         {
-            foreach (var item in item_data)
+            foreach (var item in itemData)
             {
                 string temp = "";
                 if (item.ItemName is not null)

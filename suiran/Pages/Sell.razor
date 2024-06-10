@@ -28,7 +28,7 @@
 				</center>
 				<p>すべての合計金額: @AllPrices 円</p>
 				<p>お金を準備し、画面を明るくしてお待ちください。</p>
-				@if (item_data != null)
+				@if (itemData != null)
 				{
 					<table class="table">
 						<thead>
@@ -40,7 +40,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							@foreach (var item in this.item_data)
+							@foreach (var item in this.itemData)
 							{
 								<tr>
 									<td>@item.ItemName</td>
@@ -80,7 +80,7 @@
 	</div>
 </div>
 
-@if (item_data == null)
+@if (itemData == null)
 {
 	<p><em>読み込み中…</em></p>
 }
@@ -97,7 +97,7 @@ else
 		</a>
 	</div>
 
-	@foreach (var item in this.item_data)
+	@foreach (var item in this.itemData)
 	{
 		<div class="item" @key="item.ItemName">
 			<div class="img" style="background-image: url('@item.ItemImage')"></div>
