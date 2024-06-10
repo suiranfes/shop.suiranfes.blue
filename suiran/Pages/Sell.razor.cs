@@ -9,6 +9,7 @@ public partial class SellBase : ComponentBase
 {
     [Inject]
     public HttpClient? Http { get; set; }
+    [Inject]
     public ISessionStorageService? SessionStorage { get; set; }
 
     public ItemData[]? item_data;
