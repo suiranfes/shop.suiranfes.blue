@@ -32,6 +32,13 @@ public partial class SellBase : ComponentBase
                 else
                     item.ItemNum = 0;
             }
+
+        // Preload images
+        if (itemData != null && Http != null)
+            foreach (var imageURL in itemData)
+            {
+                (await Http.GetAsync(imageURL.ItemImage, HttpCompletionOption.ResponseHeadersRead)).EnsureSuccessStatusCode();
+            }
     }
 
     public class ItemData
