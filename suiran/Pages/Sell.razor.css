@@ -1,14 +1,12 @@
-:root{
+:root {
     color: var(--suiran-4);
-
-    /* 後でNoto Sans入れる */
     font-family: sans-serif;
 }
 
-body, main, main h1{margin: 0;}
-main h1{padding: 0.6em 5%;}
+body, main, main h1 {margin: 0;}
+main h1 {padding: 0.6em 5%;}
 
-.item, .item p{
+.item, .item p {
     color: var(--suiran-4);
     background-color: var(--suiran-1);
     border-radius: 18px;
@@ -21,7 +19,7 @@ main h1{padding: 0.6em 5%;}
     align-items: center;
 }
 
-.img{
+.img {
     /* margin: 0 10px 0 0; */
     width: 10vh;
     height: 10vh;
@@ -32,7 +30,7 @@ main h1{padding: 0.6em 5%;}
     fill: var(--suiran-4);
 }
 
-.text{
+.text {
     width: calc(100% - 10vh - 2vh);
     padding: 0 0 0 2vh;
 
@@ -43,18 +41,18 @@ main h1{padding: 0.6em 5%;}
     align-content: space-around;
 }
 
-.text div{
+.text div {
     width: 50%;
     padding: 0;
 }
 
 @media (max-width: 720.98px) {
-    .text .text-top{
+    .text .text-top {
         width: 100%;
     }
 }
 
-.footer{
+.footer {
     /*width: 100%;*/
     height: 20vh;
     margin: -10vh 0;
@@ -75,7 +73,7 @@ main h1{padding: 0.6em 5%;}
     border-width: 1px 1px 0 1px;
 }
 
-.button{
+.button {
     text-decoration: none;
     color: var(--suiran-0);
     background-color: var(--suiran-3);
@@ -87,12 +85,12 @@ main h1{padding: 0.6em 5%;}
 	user-select: none;
 }
 
-.top{
+.top {
     display: flex;
     flex-direction: column;
 }
 
-.under-button{
+.under-button {
     text-decoration: none;
     color: var(--suiran-4);
     @media (prefers-color-scheme: light) {background-color: rgba(255, 255, 255, 0.2);}

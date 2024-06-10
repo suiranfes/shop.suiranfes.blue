@@ -25,8 +25,8 @@ public partial class SellBase : ComponentBase
         if (item_data != null)
             foreach (var item in item_data)
             {
-                if (SessionStorage != null && int.TryParse(await SessionStorage.GetItemAsync<string>("data-" + item.ItemName), out int c))
-                    item.ItemNum = c;
+                if (SessionStorage != null && int.TryParse(await SessionStorage.GetItemAsync<string>("data-" + item.ItemName), out int outData))
+                    item.ItemNum = outData;
                 else
                     item.ItemNum = 0;
             }
@@ -45,12 +45,12 @@ public partial class SellBase : ComponentBase
     {
         if (item_data != null)
         {
-            foreach (var item in this.item_data)
+            foreach (var item in item_data)
             {
                 item.ItemNum = 0;
             }
         }
-        StateHasChanged();// UIの再描画
+        StateHasChanged(); // UIの再描画
     }
 
     public int AllPrices = 0;
@@ -85,7 +85,7 @@ public partial class SellBase : ComponentBase
         }
         QRCodeStr = GenerateQR(qrContent);
         // qrContent = string.Empty;
-        StateHasChanged();// UIの再描画
+        StateHasChanged(); // UIの再描画
     }
 
     public async void Declement(ItemData item)
@@ -96,7 +96,7 @@ public partial class SellBase : ComponentBase
             if (SessionStorage != null)
                 await SessionStorage.SetItemAsStringAsync("data-" + item.ItemName, "");
         }
-        StateHasChanged();// UIの再描画
+        StateHasChanged(); // UIの再描画
     }
 
     public async void Plus(ItemData item)
@@ -104,7 +104,7 @@ public partial class SellBase : ComponentBase
         item.ItemNum++;
         if (SessionStorage != null)
             await SessionStorage.SetItemAsStringAsync("data-" + item.ItemName, item.ItemNum.ToString());
-        StateHasChanged();// UIの再描画
+        StateHasChanged(); // UIの再描画
     }
 
     public static string GenerateQR(string input)

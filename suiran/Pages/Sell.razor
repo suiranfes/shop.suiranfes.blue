@@ -9,80 +9,80 @@
 
 <!-- QR Modal -->
 <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="ModalLabel">QRコード</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-		<center>
-			@if (!string.IsNullOrEmpty(QRCodeStr))
-			{
-				<p><img width="300" height="300" src="@QRCodeStr" role="img" /></p>
-			}
-			else
-			{
-				<p>QRコード作成中です...</p>
-			}
-		</center>
-		<p>すべての合計金額: @AllPrices 円</p>
-		<p>お金を準備し、画面を明るくしてお待ちください。</p>
-		@if (item_data != null)
-		{
-			<table class="table">
-				<thead>
-					<tr>
-						<th>商品名</th>
-						<th>価格(円)</th>
-						<th>個数</th>
-						<th>合計金額(円)</th>
-					</tr>
-				</thead>
-				<tbody>
-					@foreach (var item in this.item_data)
+	<div class="modal-dialog modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="ModalLabel">QRコード</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<center>
+					@if (!string.IsNullOrEmpty(QRCodeStr))
 					{
-						<tr>
-							<td>@item.ItemName</td>
-							<td>@item.ItemPrice</td>
-							<td>@item.ItemNum</td>
-							<td>@item.ItemPrices</td>
-						</tr>
+						<p><img width="300" height="300" src="@QRCodeStr" role="img" /></p>
 					}
-				</tbody>
-			</table>
-		}
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn primary-secondary" data-bs-dismiss="modal">閉じる</button>
-      </div>
-    </div>
-  </div>
+					else
+					{
+						<p>QRコード作成中です...</p>
+					}
+				</center>
+				<p>すべての合計金額: @AllPrices 円</p>
+				<p>お金を準備し、画面を明るくしてお待ちください。</p>
+				@if (item_data != null)
+				{
+					<table class="table">
+						<thead>
+							<tr>
+								<th>商品名</th>
+								<th>価格(円)</th>
+								<th>個数</th>
+								<th>合計金額(円)</th>
+							</tr>
+						</thead>
+						<tbody>
+							@foreach (var item in this.item_data)
+							{
+								<tr>
+									<td>@item.ItemName</td>
+									<td>@item.ItemPrice</td>
+									<td>@item.ItemNum</td>
+									<td>@item.ItemPrices</td>
+								</tr>
+							}
+						</tbody>
+					</table>
+				}
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn primary-secondary" data-bs-dismiss="modal">閉じる</button>
+			</div>
+		</div>
+	</div>
 </div>
 
 <!-- AllDel Modal -->
 <div class="modal fade" id="DelModal" tabindex="-1" aria-labelledby="DelModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="DelModalLabel">警告</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>個数のデータがすべて削除されます。</p>
-		<p>(QRコード読み込み後は注文に影響しません。)</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">キャンセル</button>
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" @onclick="AllDel">全削除</button>
-      </div>
-    </div>
-  </div>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="DelModalLabel">警告</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<p>個数のデータがすべて削除されます。</p>
+				<p>(QRコード読み込み後は注文に影響しません。)</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">キャンセル</button>
+				<button type="button" class="btn btn-primary" data-bs-dismiss="modal" @onclick="AllDel">全削除</button>
+			</div>
+		</div>
+	</div>
 </div>
 
 @if (item_data == null)
 {
-    <p><em>読み込み中…</em></p>
+	<p><em>読み込み中…</em></p>
 }
 else
 {
@@ -106,7 +106,7 @@ else
 				<div class="text-top">@item.ItemName</div>
 				<div class="text-top">
 					<a class="button" @onclick="() => Declement(item)" oncontextmenu="return false;">-</a>
-						@item.ItemNum 
+					@item.ItemNum
 					<a class="button" @onclick="() => Plus(item)" oncontextmenu="return false;">+</a>
 				</div>
 				<div>1個: @item.ItemPrice 円</div>
