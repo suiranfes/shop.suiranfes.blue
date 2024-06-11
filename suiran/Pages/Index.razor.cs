@@ -12,6 +12,7 @@ public partial class IndexBase : ComponentBase
 
     protected override async Task OnInitializedAsync()
     {
+        // Cache images
         // Ignore the cache of `sample-data/docs.json`
         var cacheBuster = new DateTime().ToString("yyyyMMddHHmmss");
         var url = $"sample-data/docs.json?{cacheBuster}";
@@ -20,7 +21,9 @@ public partial class IndexBase : ComponentBase
 
         visibility = "visible";
         ChangePages(page);
+    }
 
+    protected override async Task OnParametersSetAsync(){
         // Preload images
         if (docsData != null && Http != null)
             foreach (var imageURL in docsData)
