@@ -8,7 +8,7 @@ public partial class IndexBase : ComponentBase
     [Inject]
     public HttpClient? Http { get; set; }
 
-    public DocsData[]? docs_data;
+    public DocsData[]? docsData;
 
     protected override async Task OnInitializedAsync()
     {
@@ -16,10 +16,17 @@ public partial class IndexBase : ComponentBase
         var cacheBuster = new DateTime().ToString("yyyyMMddHHmmss");
         var url = $"sample-data/docs.json?{cacheBuster}";
         if (Http != null)
-            docs_data = await Http.GetFromJsonAsync<DocsData[]>(url);
+            docsData = await Http.GetFromJsonAsync<DocsData[]>(url);
 
         visibility = "visible";
         ChangePages(page);
+
+        // Preload images
+        if (docsData != null && Http != null)
+            foreach (var imageURL in docsData)
+            {
+                (await Http.GetAsync(imageURL.DocsImage, HttpCompletionOption.ResponseHeadersRead)).EnsureSuccessStatusCode();
+            }
     }
 
     public class DocsData
@@ -38,7 +45,7 @@ public partial class IndexBase : ComponentBase
 
     public void Next()
     {
-        if (docs_data != null && page == docs_data.Length - 1)
+        if (docsData != null && page == docsData.Length - 1)
             return;
         page++;
         ChangePages(page);
@@ -54,11 +61,11 @@ public partial class IndexBase : ComponentBase
 
     public void ChangePages(int _page)
     {
-        if (docs_data == null)
+        if (docsData == null)
             return;
-        headerArea = docs_data[_page].DocsTitle ?? "";
-        textArea = docs_data[_page].DocsDescription ?? "";
-        imageArea = docs_data[_page].DocsImage ?? "";
+        headerArea = docsData[_page].DocsTitle ?? "";
+        textArea = docsData[_page].DocsDescription ?? "";
+        imageArea = docsData[_page].DocsImage ?? "";
         visibility = (imageArea == "") ? "hidden" : "visible";
     }
 }
