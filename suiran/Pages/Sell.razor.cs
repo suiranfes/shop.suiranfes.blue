@@ -18,8 +18,10 @@ public partial class SellBase : ComponentBase
     {
         // Read json file
         // (Ignore the cache of `sample-data/item.json`)
-        var cacheBuster = new DateTime().ToString("yyyyMMddHHmmss");
-        var url = $"sample-data/item.json?{cacheBuster}";
+        // var cacheBuster = new DateTime().ToString("yyyyMMddHHmmss");
+        // var url = $"sample-data/item.json?{cacheBuster}";
+        // Read json file from common data (See: https://github.com/suiranfes/mock-store-datas)
+        var url = $"https://suiranfes.github.io/mock-store-datas/products.json";
         if (Http != null)
             itemData = await Http.GetFromJsonAsync<ItemData[]>(url);
 
