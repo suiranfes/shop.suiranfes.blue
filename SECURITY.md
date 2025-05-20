@@ -9,4 +9,4 @@
 
 ## Reporting a Vulnerability
 
-please tell [me](https://github.com/mint73) on email or other way.
+please tell [me](https://github.com/mint73) on email or [other way](https://misskey.io/@ink).
