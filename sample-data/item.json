@@ -1,0 +1,52 @@
+[
+  {
+    "itemName": "チュロス",
+    "itemPrice": 200,
+    "itemImage": "sample-data/icons/03.svg"
+  },
+  {
+    "itemName": "かき氷",
+    "itemPrice": 200,
+    "itemImage": "sample-data/icons/05.svg"
+  },
+  {
+    "itemName": "ペットボトル",
+    "itemPrice": 150,
+    "itemImage": "sample-data/icons/02.svg"
+  },
+  {
+    "itemName": "アイスチョコバナナ",
+    "itemPrice": 300,
+    "itemImage": "sample-data/icons/08.svg"
+  },
+  {
+    "itemName": "つぶつぶアイス",
+    "itemPrice": 350,
+    "itemImage": "sample-data/icons/06.svg"
+  },
+  {
+    "itemName": "フランクフルト",
+    "itemPrice": 200,
+    "itemImage": "sample-data/icons/01.svg"
+  },
+  {
+    "itemName": "焼きそば",
+    "itemPrice": 300,
+    "itemImage": "sample-data/icons/09.svg"
+  },
+  {
+    "itemName": "クレープ",
+    "itemPrice": 350,
+    "itemImage": "sample-data/icons/07.svg"
+  },
+  {
+    "itemName": "ドリンク各種",
+    "itemPrice": 300,
+    "itemImage": "sample-data/icons/04.svg"
+  },
+  {
+    "itemName": "肉巻きおにぎり",
+    "itemPrice": 400,
+    "itemImage": "sample-data/icons/10.svg"
+  }
+]
